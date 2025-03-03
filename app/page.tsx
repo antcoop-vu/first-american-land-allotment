@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import NavBar from "@/components/nav-bar"
 import FeatureCard from "@/components/feature-card"
 import StoryMapHighlight from "@/components/story-map-highlight"
+import Image from "next/image"
 
 export default function LandingPage() {
   return (
@@ -10,22 +11,33 @@ export default function LandingPage() {
       <NavBar />
 
       {/* Hero Section */}
-      <section className="bg-slate-100 py-20 text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Welcome</h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-slate-700">
+      <section className="relative py-32 md:py-40 lg:py-48 h-72">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1443632864897-14973fa006cf?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
+            alt="Landscape background"
+            fill
+            priority
+            className="object-cover"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-teal/40"></div>
+          {/* Content */}
+        <div className="container relative z-10 mx-auto px-4 text-center my-24">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">Welcome</h1>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">
             Explore the history and geography of First American land allotments through interactive maps, research, and
             comprehensive data resources.
           </p>
-          <Button size="lg" className="bg-slate-900 hover:bg-slate-800">
-            Get Started
-          </Button>
+          <Button variant="default">Get Started</Button>
+        </div>
         </div>
       </section>
 
       {/* About Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-16">
           <h2 className="text-3xl font-bold mb-6">About</h2>
           <p className="text-lg text-slate-700 max-w-4xl">
             The First American Land Allotment project documents the historical distribution and changes of indigenous
@@ -38,8 +50,8 @@ export default function LandingPage() {
       </section>
 
       {/* Feature Cards Section */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
               title="Story Maps"
@@ -61,7 +73,7 @@ export default function LandingPage() {
 
       {/* Story Map Highlight */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-16">
           <StoryMapHighlight />
         </div>
       </section>
@@ -92,11 +104,6 @@ export default function LandingPage() {
                 <li>
                   <Link href="#" className="text-slate-300 hover:text-white">
                     Research Papers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-slate-300 hover:text-white">
-                    Educational Materials
                   </Link>
                 </li>
               </ul>
