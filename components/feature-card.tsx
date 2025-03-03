@@ -14,7 +14,7 @@ export default function FeatureCard({ title, description }: FeatureCardProps) {
         <div className="absolute inset-0 flex items-center justify-center text-slate-400">
           {title === "Story Maps" && (
             <Image
-              src="/placeholder.svg?height=200&width=400"
+              src="https://images.unsplash.com/photo-1581922819941-6ab31ab79afc?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Story Maps"
               width={400}
               height={200}
@@ -23,7 +23,7 @@ export default function FeatureCard({ title, description }: FeatureCardProps) {
           )}
           {title === "Data" && (
             <Image
-              src="/placeholder.svg?height=200&width=400"
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Data"
               width={400}
               height={200}
@@ -32,7 +32,7 @@ export default function FeatureCard({ title, description }: FeatureCardProps) {
           )}
           {title === "Research" && (
             <Image
-              src="/placeholder.svg?height=200&width=400"
+              src="https://images.unsplash.com/photo-1537202108838-e7072bad1927?q=80&w=3062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Research"
               width={400}
               height={200}

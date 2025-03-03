@@ -20,11 +20,10 @@ export default function NavBar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-40 h-8 bg-slate-300">
-              {/* Replace with actual logo */}
-              <div className="absolute inset-0 flex items-center justify-center text-slate-700 font-semibold">
-                FALA Project
-              </div>
+            <div className="relative flex h-8 bg-primary px-3">
+              <p className="flex items-center justify-center text-cream font-semibold">
+                First American Land Allotment
+              </p>
             </div>
           </Link>
 
@@ -32,24 +31,19 @@ export default function NavBar() {
           <nav className="hidden md:flex items-center space-x-8">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="link" className="flex items-center">
+                <Button variant="link" className="flex items-center text-md font-normal text-slate-700 hover:text-slate-900">
                   About <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem>
                   <Link href="#" className="w-full">
-                    Mission
+                    Data Creation
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Link href="#" className="w-full">
-                    Team
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="#" className="w-full">
-                    History
+                    Partners
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -69,24 +63,24 @@ export default function NavBar() {
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="link" className="flex items-center">
+                <Button variant="link" className="flex items-center text-md font-normal text-slate-700 hover:text-slate-900">
                   Data <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem>
                   <Link href="#" className="w-full">
-                    Downloads
+                    Dashboard
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Link href="#" className="w-full">
-                    API
+                    Map Making
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Link href="#" className="w-full">
-                    Documentation
+                    Download Data
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>

@@ -7,7 +7,7 @@ export default function StoryMapHighlight() {
       <div className="bg-slate-200 rounded-lg overflow-hidden h-80 relative">
         {/* Placeholder for story map image */}
         <Image
-          src="/placeholder.svg?height=400&width=600"
+          src="https://images.unsplash.com/photo-1501724326152-7a82bf5eae72?q=80&w=3187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Featured Story Map"
           width={600}
           height={400}
@@ -25,7 +25,7 @@ export default function StoryMapHighlight() {
           Our interactive maps allow you to view land changes over time, understand the legal framework behind
           allotments, and see the lasting effects on contemporary tribal boundaries.
         </p>
-        <Button variant="default" className="bg-slate-900 hover:bg-slate-800">
+        <Button variant="default" className="bg-primary hover:bg-primary/90">
           Read More
         </Button>
       </div>
