@@ -4,7 +4,12 @@ import { useState } from "react"
 import Link from "next/link"
 import { Search, Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -50,12 +55,16 @@ export default function NavBar() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link href="#" className="text-slate-700 hover:text-slate-900">
+            <Link href="/story-maps" className="text-slate-700 hover:text-slate-900">
               Story Maps
             </Link>
 
-            <Link href="#" className="text-slate-700 hover:text-slate-900">
+            <Link href="/research" className="text-slate-700 hover:text-slate-900">
               Research
+            </Link>
+
+            <Link href="/tutorials" className="text-slate-700 hover:text-slate-900">
+              Tutorials
             </Link>
 
             <DropdownMenu>
@@ -83,7 +92,7 @@ export default function NavBar() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link href="#" className="text-slate-700 hover:text-slate-900">
+            <Link href="/contact" className="text-slate-700 hover:text-slate-900">
               Contact
             </Link>
           </nav>
@@ -107,19 +116,37 @@ export default function NavBar() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4 space-y-4">
-            <Link href="#" className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100">
+            <Link
+              href="#"
+              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
+            >
               About
             </Link>
-            <Link href="#" className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100">
+            <Link
+              href="/story-maps"
+              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
+            >
               Story Maps
             </Link>
-            <Link href="#" className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100">
+            <Link
+              href="/research"
+              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
+            >
               Research
             </Link>
-            <Link href="#" className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100">
+            <Link
+              href="/tutorials"
+              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
+            >
+              Tutorials
+            </Link>
+            <Link
+              href="#"
+              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
+            >
               Data
             </Link>
-            <Link href="#" className="block py-2 text-slate-700 hover:text-slate-900">
+            <Link href="/contact" className="block py-2 text-slate-700 hover:text-slate-900">
               Contact
             </Link>
           </div>
@@ -128,4 +155,3 @@ export default function NavBar() {
     </header>
   )
 }
-
