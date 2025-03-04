@@ -243,7 +243,9 @@ export default function TutorialsPage() {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <Card style={{ borderColor: colors.teal }}>
             <div className="aspect-video bg-gray-200 flex items-center justify-center">
-              <img src="/api/placeholder/320/180" alt="Beginner's Guide Video Thumbnail" className="w-full h-auto" />
+            <img src="/tutorials/beginner.png" alt="Beginner's Guide Video Thumbnail" className="w-full h-auto" />
+
+
             </div>
             <CardContent className="p-4">
               <h3 className="font-semibold" style={{ color: colors.navy }}>Getting Started (7:15)</h3>
@@ -300,43 +302,6 @@ export default function TutorialsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer style={{ backgroundColor: colors.navy }} className="text-white py-12 mt-auto">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center md:text-left">
-            <div>
-              <h3 className="font-bold text-lg mb-4">First American Land Allotment Project</h3>
-              <p className="text-slate-300 text-sm">
-                Preserving and connecting Indigenous peoples with their ancestral lands through digital mapping and archival research.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-slate-300 text-sm">
-                <li>Interactive Map</li>
-                <li>Research Resources</li>
-                <li>Tribal Partners</li>
-                <li>Historical Archives</li>
-                <li>About the Project</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Connect With Us</h3>
-              <ul className="space-y-2 text-slate-300 text-sm">
-                <li>support@falaproject.org</li>
-                <li>Community Forums</li>
-                <li>Volunteer Opportunities</li>
-                <li>Partner With Us</li>
-                <li>Donate</li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-slate-700 text-center text-slate-400 text-sm">
-            <p>© {new Date().getFullYear()} First American Land Allotment Project. All rights reserved.</p>
-            <p className="mt-2">Developed in partnership with tribal nations to honor and preserve Indigenous land histories.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

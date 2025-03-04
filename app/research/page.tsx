@@ -533,44 +533,7 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer style={{ backgroundColor: colors.navy }} className="text-white py-12 mt-auto">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center md:text-left">
-            <div>
-              <h3 className="font-bold text-lg mb-4">First American Land Allotment Project</h3>
-              <p className="text-slate-300 text-sm">
-                Preserving and connecting Indigenous peoples with their ancestral lands through 
-                digital mapping and archival research.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-slate-300 text-sm">
-                <li>Interactive Map</li>
-                <li>Research Resources</li>
-                <li>Tribal Partners</li>
-                <li>Historical Archives</li>
-                <li>About the Project</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Connect With Us</h3>
-              <ul className="space-y-2 text-slate-300 text-sm">
-                <li>support@falaproject.org</li>
-                <li>Research Forum</li>
-                <li>Volunteer Opportunities</li>
-                <li>Partner With Us</li>
-                <li>Donate</li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-slate-700 text-center text-slate-400 text-sm">
-            <p>© {new Date().getFullYear()} First American Land Allotment Project. All rights reserved.</p>
-            <p className="mt-2">Developed in partnership with tribal nations to honor and preserve Indigenous land histories.</p>
-          </div>
-        </div>
-      </footer>
+ 
     </div>
   )
 }
