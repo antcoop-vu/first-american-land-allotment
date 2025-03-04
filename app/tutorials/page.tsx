@@ -246,6 +246,7 @@ export default function TutorialsPage() {
             <img src="/tutorials/beginner.png" alt="Beginner's Guide Video Thumbnail" className="w-full h-auto" />
 
 
+
             </div>
             <CardContent className="p-4">
               <h3 className="font-semibold" style={{ color: colors.navy }}>Getting Started (7:15)</h3>
@@ -255,7 +256,7 @@ export default function TutorialsPage() {
           
           <Card style={{ borderColor: colors.teal }}>
             <div className="aspect-video bg-gray-200 flex items-center justify-center">
-              <img src="/api/placeholder/320/180" alt="Ancestry Research Video Thumbnail" className="w-full h-auto" />
+            <img src="/tutorials/ancestory.png" alt="Beginner's Guide Video Thumbnail" className="w-full h-auto" />
             </div>
             <CardContent className="p-4">
               <h3 className="font-semibold" style={{ color: colors.navy }}>Finding Family Connections (12:43)</h3>
@@ -265,7 +266,7 @@ export default function TutorialsPage() {
           
           <Card style={{ borderColor: colors.teal }}>
             <div className="aspect-video bg-gray-200 flex items-center justify-center">
-              <img src="/api/placeholder/320/180" alt="Document Analysis Video Thumbnail" className="w-full h-auto" />
+            <img src="/tutorials/documents.png" alt="Beginner's Guide Video Thumbnail" className="w-full h-auto" />
             </div>
             <CardContent className="p-4">
               <h3 className="font-semibold" style={{ color: colors.navy }}>Understanding Documents (9:21)</h3>

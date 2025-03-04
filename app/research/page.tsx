@@ -130,7 +130,7 @@ export default function ResearchPage() {
             <Card className="shadow-md overflow-hidden" style={{ borderColor: colors.teal }}>
               <div className="h-48 bg-gray-200 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src="/api/placeholder/400/200" alt="Dawes Rolls Collection" className="w-full h-full object-cover" />
+                  <img src="tutorials/dowee.png" alt="Dawes Rolls Collection" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute top-0 right-0 m-3 px-3 py-1 rounded" style={{ backgroundColor: colors.amber, color: colors.navy }}>
                   <span className="text-sm font-semibold">1887-1914</span>
@@ -159,7 +159,7 @@ export default function ResearchPage() {
             <Card className="shadow-md overflow-hidden" style={{ borderColor: colors.teal }}>
               <div className="h-48 bg-gray-200 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src="/api/placeholder/400/200" alt="Tribal Territory Maps" className="w-full h-full object-cover" />
+                  <img src="tutorials/tribal.png" alt="Tribal Territory Maps" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute top-0 right-0 m-3 px-3 py-1 rounded" style={{ backgroundColor: colors.amber, color: colors.navy }}>
                   <span className="text-sm font-semibold">1830-1920</span>
