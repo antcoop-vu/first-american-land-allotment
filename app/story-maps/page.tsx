@@ -10,42 +10,42 @@ const storyMaps = [
     id: "dawes-act",
     title: "The Dawes Act and Its Impact",
     description: "Explore how the 1887 Dawes Act transformed indigenous land ownership across America.",
-    image: "https://images.unsplash.com/photo-1501724326152-7a82bf5eae72?q=80&w=3187&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?q=80&w=2833&auto=format&fit=crop&ixlib=rb-4.0.3",
     date: "February 2023"
   },
   {
     id: "oklahoma-allotments",
     title: "Oklahoma Land Allotments",
     description: "A detailed look at the allotment of tribal lands in Oklahoma Territory.",
-    image: "https://images.unsplash.com/photo-1605377347958-e8bd4c00ba1d?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3",
     date: "November 2022"
   },
   {
     id: "reservation-boundaries",
     title: "Changing Reservation Boundaries",
     description: "Visualizing how reservation boundaries have changed over the past century.",
-    image: "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=3269&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1476370648495-3533f64427a2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3",
     date: "August 2022"
   },
   {
     id: "allotment-legacy",
     title: "The Legacy of Allotment",
     description: "Understanding the long-term consequences of allotment policies on tribal communities today.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1500916434205-0c77489c6cf7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3",
     date: "May 2022"
   },
   {
     id: "tribal-sovereignty",
     title: "Tribal Sovereignty and Land",
     description: "Examining the relationship between land ownership and tribal sovereignty.",
-    image: "https://images.unsplash.com/photo-1533709752211-118fcaf03312?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1551142457-6d10b308d9c2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3",
     date: "January 2022"
   },
   {
     id: "urban-indigenous",
     title: "Urban Indigenous Communities",
     description: "How allotment policies contributed to urban migration of indigenous peoples.",
-    image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=3244&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1518985622188-c4316b4d9c6f?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3",
     date: "October 2021"
   }
 ]
@@ -58,15 +58,8 @@ export default function StoryMapsPage() {
       {/* Hero Section */}
       <section className="relative py-24 md:py-32">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1524055988636-436cfa46e59e?q=80&w=3035&auto=format&fit=crop&ixlib=rb-4.0.3"
-            alt="Story Maps background"
-            fill
-            priority
-            className="object-cover"
-          />
-          {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 z-0 bg-slate-700">
+          {/* Gray background instead of image */}
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         

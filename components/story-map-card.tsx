@@ -1,7 +1,6 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar } from "lucide-react"
+import { Calendar, MapIcon } from "lucide-react"
 
 interface StoryMapCardProps {
   id: string
@@ -11,16 +10,11 @@ interface StoryMapCardProps {
   date: string
 }
 
-export default function StoryMapCard({ id, title, description, image, date }: StoryMapCardProps) {
+export default function StoryMapCard({ id, title, description, date }: StoryMapCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
-      <div className="h-48 relative">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover"
-        />
+      <div className="h-48 bg-slate-200 flex items-center justify-center">
+        <MapIcon className="h-16 w-16 text-slate-400" />
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <div className="flex items-center text-sm text-slate-500 mb-3">
