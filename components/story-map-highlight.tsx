@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export default function StoryMapHighlight() {
@@ -25,9 +26,11 @@ export default function StoryMapHighlight() {
           Our interactive maps allow you to view land changes over time, understand the legal framework behind
           allotments, and see the lasting effects on contemporary tribal boundaries.
         </p>
-        <Button variant="default" className="bg-primary hover:bg-primary/90">
-          Read More
-        </Button>
+        <Link href="/story-maps/dawes-act">
+          <Button variant="default" className="bg-primary hover:bg-primary/90">
+            Read More
+          </Button>
+        </Link>
       </div>
     </div>
   )
