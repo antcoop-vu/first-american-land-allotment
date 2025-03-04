@@ -96,8 +96,9 @@ export default function ContactPage() {
                     <h3 className="font-semibold mb-1">Address</h3>
                     <p className="text-slate-600">
                       First American Land Allotment Project<br />
-                      123 Research Way<br />
-                      Oklahoma City, OK 73102
+                      Vanderbilt University<br />
+                      2301 Vanderbilt Place<br />
+                      Nashville, TN 37235
                     </p>
                   </div>
                 </div>

@@ -1,13 +1,19 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { MapIcon } from "lucide-react"
 
 export default function StoryMapHighlight() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div className="bg-slate-200 rounded-lg overflow-hidden h-80 relative flex items-center justify-center">
-        {/* Gray placeholder with map icon */}
-        <MapIcon className="h-24 w-24 text-slate-400" />
+      <div className="bg-slate-200 rounded-lg overflow-hidden h-80 relative">
+        {/* Placeholder for story map image */}
+        <Image
+          src="https://images.unsplash.com/photo-1501724326152-7a82bf5eae72?q=80&w=3187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Featured Story Map"
+          width={600}
+          height={400}
+          className="object-cover w-full h-full"
+        />
       </div>
       <div>
         <h2 className="text-3xl font-bold mb-4">Story Map</h2>
