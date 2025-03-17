@@ -61,30 +61,9 @@ export default function NavBar() {
               Tutorials
             </Link>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="link" className="flex items-center text-md font-normal text-slate-700 hover:text-slate-900">
-                  Data <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <Link href="#" className="w-full">
-                    Dashboard
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="#" className="w-full">
-                    Map Making
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="#" className="w-full">
-                    Download Data
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Link href="/data" className="text-slate-700 hover:text-slate-900">
+              Data
+            </Link>
 
             <Link href="/contact" className="text-slate-700 hover:text-slate-900">
               Contact
