@@ -15,7 +15,6 @@ export default function MapDashboard() {
           name: "Cherokee Nation",
           year: 1866,
           tribe: "Cherokee",
-          type: "Reservation",
           acres: 7500000,
         },
         geometry: {
@@ -42,7 +41,6 @@ export default function MapDashboard() {
         <strong>${feature.properties.name}</strong><br/>
         Tribe: ${feature.properties.tribe}<br/>
         Year: ${feature.properties.year}<br/>
-        Type: ${feature.properties.type}<br/>
         Area: ${feature.properties.acres.toLocaleString()} acres
       `)
     }

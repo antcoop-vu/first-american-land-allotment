@@ -32,28 +32,6 @@ export default function DataPage() {
               The data presented in this dashboard represents historical records of land allotments, treaties, and
               territorial changes affecting First American nations from 1830 to 1930.
             </p>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-start">
-                <span className="bg-teal w-3 h-3 rounded-full mt-1 mr-2"></span>
-                <span>
-                  <strong>Reservations</strong>: Lands set aside by the federal government for tribal use and occupancy.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-sage w-3 h-3 rounded-full mt-1 mr-2"></span>
-                <span>
-                  <strong>Treaty Lands</strong>: Territories defined in formal treaties between tribes and the U.S.
-                  government.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-gold w-3 h-3 rounded-full mt-1 mr-2"></span>
-                <span>
-                  <strong>Allotments</strong>: Individual parcels of land assigned to tribal members under the Dawes Act
-                  and similar policies.
-                </span>
-              </li>
-            </ul>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-sm">
