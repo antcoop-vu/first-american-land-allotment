@@ -30,7 +30,9 @@ export default function LandingPage() {
             Explore the history and geography of First American land allotments through interactive maps, research, and
             comprehensive data resources.
           </p>
-          <Button variant="default">Get Started</Button>
+          <Link href="/data">
+            <Button variant="default">Explore the Dashboard</Button>
+          </Link>
         </div>
         </div>
       </section>
