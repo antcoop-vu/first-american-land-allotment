@@ -1,10 +1,12 @@
 'use client'
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { MapContainer, TileLayer, GeoJSON, ZoomControl } from "react-leaflet"
+import "leaflet/dist/leaflet.css";
 
 export default function MapDashboard() {
   const mapRef = useRef(null)
+
   
   return (
     <div className="bg-cream/50 rounded-lg shadow-md overflow-hidden">
@@ -21,6 +23,7 @@ export default function MapDashboard() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <ZoomControl position="bottomright" />
         </MapContainer>
       )}
       </div>
