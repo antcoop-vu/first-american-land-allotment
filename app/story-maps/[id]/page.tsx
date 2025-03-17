@@ -9,7 +9,7 @@ const storyMaps = {
   "dawes-act": {
     title: "The Dawes Act and Its Impact",
     description: "Explore how the 1887 Dawes Act transformed indigenous land ownership across America.",
-    image: "https://images.unsplash.com/photo-1501724326152-7a82bf5eae72?q=80&w=3187&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?q=80&w=2833&auto=format&fit=crop&ixlib=rb-4.0.3",
     date: "February 2023",
     author: "Dr. Sarah Johnson",
     content: `
@@ -35,7 +35,7 @@ const storyMaps = {
   "oklahoma-allotments": {
     title: "Oklahoma Land Allotments",
     description: "A detailed look at the allotment of tribal lands in Oklahoma Territory.",
-    image: "https://images.unsplash.com/photo-1605377347958-e8bd4c00ba1d?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3",
     date: "November 2022",
     author: "Prof. Michael White",
     content: `
@@ -81,15 +81,8 @@ export default function StoryMapPage({ params }: { params: { id: string } }) {
       {/* Hero Section */}
       <section className="relative py-32 md:py-40">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={storyMap.image}
-            alt={storyMap.title}
-            fill
-            priority
-            className="object-cover"
-          />
-          {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 z-0 bg-slate-700">
+          {/* Gray background instead of image */}
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
