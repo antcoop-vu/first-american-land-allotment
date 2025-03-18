@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button"
 interface FeatureCardProps {
   title: string
   description: string
+  buttonText: string
 }
 
-export default function FeatureCard({ title, description }: FeatureCardProps) {
+export default function FeatureCard({ title, description, buttonText }: FeatureCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <div className="h-48 bg-slate-200 relative">
@@ -45,7 +46,7 @@ export default function FeatureCard({ title, description }: FeatureCardProps) {
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-slate-600 mb-4">{description}</p>
         <Button variant="default" className="w-full">
-          Get Started
+          {buttonText}
         </Button>
       </div>
     </div>

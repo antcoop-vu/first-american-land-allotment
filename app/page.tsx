@@ -31,7 +31,7 @@ export default function LandingPage() {
             comprehensive data resources.
           </p>
           <Link href="/data">
-            <Button variant="default">Explore the Dashboard</Button>
+            <Button className="h-20 rounded-md text-white text-xl bg-primary px-8">Explore the Dashboard</Button>
           </Link>
         </div>
         </div>
@@ -58,16 +58,19 @@ export default function LandingPage() {
             <FeatureCard
               title="Story Maps"
               description="Explore interactive narratives that combine maps, images, and text to tell the stories of First American land allotments."
+              buttonText="Explore story maps"
             />
 
             <FeatureCard
               title="Data"
               description="Access comprehensive datasets on historical land allotments, including boundaries, dates, and ownership records."
+              buttonText="Explore the dashboard"
             />
 
             <FeatureCard
               title="Research"
               description="Discover scholarly articles, primary sources, and analysis on the history and impact of land allotment policies."
+              buttonText="Explore the research"
             />
           </div>
         </div>
