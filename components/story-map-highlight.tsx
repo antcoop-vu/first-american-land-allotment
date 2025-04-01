@@ -25,17 +25,7 @@ export default function StoryMapHighlight() {
             patterns for Native American tribes, leading to the loss of more
             than 90 million acres of tribal land by 1934.
           </p>
-          <div className="flex flex-wrap gap-3 mb-6">
-            <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-              Historical
-            </span>
-            <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-              Interactive
-            </span>
-            <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-              Educational
-            </span>
-          </div>
+
           <Link href="/story-maps/dawes-act" className="mt-auto">
             <Button className="group text-md py-6 bg-accent hover:bg-accent/90">
               View Story Map

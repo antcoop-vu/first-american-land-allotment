@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -6,31 +6,46 @@ export default function Footer() {
       <div className="container mx-auto px-4 text-center">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">First American Land Allotment</h3>
+            <h3 className="text-xl font-bold mb-4">
+              First American Land Allotment
+            </h3>
             <p className="text-slate-300">
-              Preserving and documenting indigenous land history through interactive resources.
+              Preserving and documenting indigenous land history through
+              interactive resources.
             </p>
           </div>
           <div>
             <h4 className="font-bold mb-4">Resources</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/story-maps" className="text-slate-300 hover:text-white">
+                <Link
+                  href="/story-maps"
+                  className="text-slate-300 hover:text-white"
+                >
                   Story Maps
                 </Link>
               </li>
               <li>
-                <Link href="/research" className="text-slate-300 hover:text-white">
+                <Link
+                  href="/research"
+                  className="text-slate-300 hover:text-white"
+                >
                   Research
                 </Link>
               </li>
               <li>
-                <Link href="/tutorials" className="text-slate-300 hover:text-white">
+                <Link
+                  href="/tutorials"
+                  className="text-slate-300 hover:text-white"
+                >
                   Tutorials
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-300 hover:text-white">
+                <Link
+                  href="/contact"
+                  className="text-slate-300 hover:text-white"
+                >
                   Contact
                 </Link>
               </li>
@@ -40,7 +55,10 @@ export default function Footer() {
             <h4 className="font-bold mb-4">About Us</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/mission" className="text-slate-300 hover:text-white">
+                <Link
+                  href="/mission"
+                  className="text-slate-300 hover:text-white"
+                >
                   Mission
                 </Link>
               </li>
@@ -50,7 +68,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/partners" className="text-slate-300 hover:text-white">
+                <Link
+                  href="/partners"
+                  className="text-slate-300 hover:text-white"
+                >
                   Partners
                 </Link>
               </li>
@@ -59,24 +80,28 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Stay Connected</h4>
             <p className="text-slate-300 mb-4">
-              Subscribe to our newsletter for updates on new resources and research.
+              Subscribe to our newsletter for updates on new resources and
+              research.
             </p>
             <div className="flex justify-center">
               <input
                 type="email"
                 placeholder="Your email"
-                className="px-3 py-2 bg-slate-800 text-white rounded-md focus:outline-none"
+                className="px-3 py-2 bg-slate-800/50 text-white rounded-md focus:outline-none"
               />
-              <button className="px-4 mx-2 py-2 bg-white hover:bg-white/50 text-slate-800 rounded-md">
+              <button className="px-4 mx-2 py-2 bg-accent hover:bg-accent/50 text-muted rounded-md">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
         <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-          <p>© {new Date().getFullYear()} First American Land Allotment Project. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} First American Land Allotment Project.
+            All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
