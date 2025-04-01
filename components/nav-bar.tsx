@@ -1,107 +1,45 @@
-"use client"
-
-import { useState } from "react"
-import Link from "next/link"
-import { Search, Menu, X } from "lucide-react"
+import Link from "next/link";
 
 export default function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   return (
-    <header className="border-b bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="relative flex h-8 bg-primary px-3">
-              <p className="flex items-center justify-center text-cream font-semibold">
-                First American Land Allotment
-              </p>
-            </div>
+    <nav className="bg-slate-50 py-6 shadow-md">
+      <div className="container mx-auto px-6 flex items-center justify-between">
+        <Link href="/" className="text-2xl font-bold text-slate-900">
+          First American Land Allotments
+        </Link>
+        <div className="space-x-6">
+          <Link
+            href="/story-maps"
+            className="text-slate-600 text-xl hover:text-accent transition-colors"
+          >
+            Story Maps
           </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/about" className="text-slate-700 hover:text-slate-900">
-              About
-            </Link>
-
-            <Link href="/story-maps" className="text-slate-700 hover:text-slate-900">
-              Story Maps
-            </Link>
-
-            <Link href="/research" className="text-slate-700 hover:text-slate-900">
-              Research
-            </Link>
-
-            <Link href="/tutorials" className="text-slate-700 hover:text-slate-900">
-              Tutorials
-            </Link>
-
-            <Link href="/data" className="text-slate-700 hover:text-slate-900">
-              Data
-            </Link>
-
-            <Link href="/contact" className="text-slate-700 hover:text-slate-900">
-              Contact
-            </Link>
-          </nav>
-
-          {/* Search and Mobile Menu Toggle */}
-          <div className="flex items-center">
-            <button className="p-2 text-slate-700 hover:text-slate-900">
-              <Search className="h-5 w-5" />
-            </button>
-            <button
-              className="ml-4 p-2 text-slate-700 hover:text-slate-900 md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
-          </div>
+          <Link
+            href="/data"
+            className="text-slate-600 text-xl hover:text-accent transition-colors"
+          >
+            Data
+          </Link>
+          <Link
+            href="/research"
+            className="text-slate-600 text-xl hover:text-accent transition-colors"
+          >
+            Research
+          </Link>
+          <Link
+            href="/about"
+            className="text-slate-600 text-xl hover:text-accent transition-colors"
+          >
+            About
+          </Link>
+          <Link
+            href="/contact"
+            className="text-slate-600 text-xl hover:text-accent transition-colors"
+          >
+            Contact
+          </Link>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="container mx-auto px-4 py-4 space-y-4">
-            <Link
-              href="/about"
-              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
-            >
-              About
-            </Link>
-            <Link
-              href="/story-maps"
-              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
-            >
-              Story Maps
-            </Link>
-            <Link
-              href="/research"
-              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
-            >
-              Research
-            </Link>
-            <Link
-              href="/tutorials"
-              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
-            >
-              Tutorials
-            </Link>
-            <Link
-              href="/data"
-              className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
-            >
-              Data
-            </Link>
-            <Link href="/contact" className="block py-2 text-slate-700 hover:text-slate-900">
-              Contact
-            </Link>
-          </div>
-        </div>
-      )}
-    </header>
-  )
+    </nav>
+  );
 }
