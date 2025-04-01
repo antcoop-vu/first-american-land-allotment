@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import NavBar from "@/components/nav-bar"
 import { ArrowLeft, Calendar, Share2, Download, MapPin } from "lucide-react"
+import StoryMapWrapper from "@/components/story-map-wrapper"
 
 // Sample story map data - in a real app, this would come from a database or API
 const storyMaps = {
@@ -55,7 +56,7 @@ const storyMaps = {
   // Additional story maps would be defined here
 }
 
-export default function StoryMapPage({ params }: { params: { id: string } }) {
+export default async function StoryMapPage({ params }: { params: { id: string } }) {
   const storyMap = storyMaps[params.id as keyof typeof storyMaps]
   
   // Handle case where story map doesn't exist
@@ -114,16 +115,8 @@ export default function StoryMapPage({ params }: { params: { id: string } }) {
             <div className="lg:col-span-2">
               <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: storyMap.content }}></div>
               
-              {/* Interactive Map Placeholder */}
-              <div className="mt-12 bg-slate-100 rounded-lg p-4 h-96 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <h3 className="text-xl font-bold mb-2">Interactive Map</h3>
-                  <p className="text-slate-600 max-w-md mx-auto">
-                    This interactive map would display the geographical data related to this story map.
-                  </p>
-                </div>
-              </div>
+              {/* Use the client component wrapper */}
+              <StoryMapWrapper storyId={params.id} />
             </div>
             
             {/* Sidebar */}

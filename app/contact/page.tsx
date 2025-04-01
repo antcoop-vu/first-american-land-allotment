@@ -1,5 +1,5 @@
 "use client"
-
+//Need to implement server action to send the email
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
