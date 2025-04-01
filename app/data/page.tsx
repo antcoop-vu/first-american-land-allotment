@@ -1,20 +1,25 @@
-import NavBar from "@/components/nav-bar"
-import MapDashboard from "@/components/data-dashboard/map-dashboard"
-import { ArrowRight } from "lucide-react"
+import NavBar from "@/components/nav-bar";
+import MapDashboard from "@/components/data-dashboard/map-dashboard";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function DataPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-muted">
+    <div className="min-h-screen flex flex-col bg-white">
       <NavBar />
 
       {/* Header Section - Styled like the hero but smaller */}
       <header className="relative py-16 bg-primary">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-cream">Land Allotment Data</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-cream">
+              Land Allotment Data
+            </h1>
             <div className="h-1 w-20 bg-accent mb-6 rounded-full"></div>
             <p className="text-lg md:text-xl text-cream/90 max-w-2xl">
-              Explore historical data on First American land allotments, treaties, and territorial changes.
+              Explore historical data on First American land allotments,
+              treaties, and territorial changes.
             </p>
           </div>
         </div>
@@ -24,20 +29,37 @@ export default function DataPage() {
         {/* Introduction Section */}
         <section className="py-12">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-earth">Interactive Data Explorer</h2>
+            <div className="max-w-full">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-earth">
+                Interactive Data Explorer
+              </h2>
               <p className="text-earth/80 text-lg mb-8">
-                Use the interactive map to explore land allotment data. Filter by tribe, time period, or land type. You
-                can also annotate the map and download data for your research.
+                Use the interactive map to explore land allotment data. Filter
+                by tribe, time period, or land type. You can also annotate the
+                map and download data for your research.
               </p>
 
               {/* Info Card */}
-              <div className="bg-white p-6 rounded-xl shadow-md mb-8 border-l-4 border-accent">
-                <h3 className="text-xl font-semibold text-earth mb-3">Filtering Data</h3>
-                <p className="text-earth/80">
-                  Use the filter controls above the map to narrow down data by tribe, land type, or time period. You can
-                  combine multiple filters to find specific information.
-                </p>
+              <div className="bg-slate-50 p-6 rounded-xl shadow-md mb-8 border-l-4 border-accent">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-earth mb-3">
+                      Need Help?
+                    </h3>
+                    <p className="text-earth/80">
+                      Our tutorials provide step-by-step guidance on using all
+                      our research tools and resources.
+                    </p>
+                  </div>
+                  <div className="mt-2 md:mt-0">
+                    <Link href="/tutorials" className="inline-flex">
+                      <Button className="bg-accent hover:bg-accent/90 text-cream group whitespace-nowrap">
+                        View Tutorials
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -55,7 +77,9 @@ export default function DataPage() {
         {/* Information Cards Section */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-earth text-center">Data Resources</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-earth text-center">
+              Data Resources
+            </h2>
             <div className="h-1 w-20 bg-accent mx-auto mb-12 rounded-full"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
@@ -77,13 +101,18 @@ export default function DataPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-earth mb-4">Understanding the Data</h3>
+                <h3 className="text-xl font-bold text-earth mb-4">
+                  Understanding the Data
+                </h3>
                 <p className="text-earth/80 mb-6">
-                  The data presented in this dashboard represents historical records of land allotments, treaties, and
-                  territorial changes affecting First American nations from 1830 to 1930.
+                  The data presented in this dashboard represents historical
+                  records of land allotments, treaties, and territorial changes
+                  affecting First American nations from 1830 to 1930.
                 </p>
                 <div className="mt-4">
-                  <h4 className="font-medium text-earth mb-3">Filter Categories Explained</h4>
+                  <h4 className="font-medium text-earth mb-3">
+                    Filter Categories Explained
+                  </h4>
                   <ul className="text-earth/70 space-y-3">
                     <li className="flex items-start">
                       <span className="bg-accent/10 text-accent p-1 rounded-full mr-2 mt-0.5">
@@ -94,11 +123,17 @@ export default function DataPage() {
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
                         </svg>
                       </span>
                       <span>
-                        <strong className="text-earth">Tribe:</strong> Filter by specific tribal nations
+                        <strong className="text-earth">Tribe:</strong> Filter by
+                        specific tribal nations
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -110,12 +145,18 @@ export default function DataPage() {
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
                         </svg>
                       </span>
                       <span>
-                        <strong className="text-earth">Land Type:</strong> Filter by categories such as treaty
-                        territories, reservations, allotments, or ceded lands
+                        <strong className="text-earth">Land Type:</strong>{" "}
+                        Filter by categories such as treaty territories,
+                        reservations, allotments, or ceded lands
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -127,12 +168,17 @@ export default function DataPage() {
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
                         </svg>
                       </span>
                       <span>
-                        <strong className="text-earth">Time Period:</strong> Filter by year range to see changes over
-                        time
+                        <strong className="text-earth">Time Period:</strong>{" "}
+                        Filter by year range to see changes over time
                       </span>
                     </li>
                   </ul>
@@ -157,24 +203,33 @@ export default function DataPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-earth mb-4">Research Applications</h3>
+                <h3 className="text-xl font-bold text-earth mb-4">
+                  Research Applications
+                </h3>
                 <p className="text-earth/80 mb-6">
-                  This data can be used for various research purposes, including historical analysis, legal research,
-                  genealogy, and educational initiatives.
+                  This data can be used for various research purposes, including
+                  historical analysis, legal research, genealogy, and
+                  educational initiatives.
                 </p>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-medium text-earth mb-2">Citation Guidelines</h4>
+                    <h4 className="font-medium text-earth mb-2">
+                      Citation Guidelines
+                    </h4>
                     <p className="text-earth/70 bg-white p-4 rounded-lg border border-copper/10">
-                      When using this data in your research, please cite the First American Land Allotment Project and
-                      relevant primary sources.
+                      When using this data in your research, please cite the
+                      First American Land Allotment Project and relevant primary
+                      sources.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-earth mb-2">Data Limitations</h4>
+                    <h4 className="font-medium text-earth mb-2">
+                      Data Limitations
+                    </h4>
                     <p className="text-earth/70 bg-white p-4 rounded-lg border border-copper/10">
-                      This data represents our best understanding based on available historical records, which may be
-                      incomplete or contain inaccuracies.
+                      This data represents our best understanding based on
+                      available historical records, which may be incomplete or
+                      contain inaccuracies.
                     </p>
                   </div>
                 </div>
@@ -182,43 +237,7 @@ export default function DataPage() {
             </div>
           </div>
         </section>
-
-        {/* Download Section */}
-        <section className="py-16 bg-earth text-cream">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Download Data for Research</h2>
-            <p className="text-cream/80 max-w-2xl mx-auto mb-8">
-              Our datasets are available for download in multiple formats to support your research needs. All data is
-              provided under a Creative Commons Attribution license.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-accent text-earth px-6 py-3 rounded-lg font-medium hover:bg-accent/90 transition-colors flex items-center">
-                Download CSV
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
-              <button className="bg-transparent border border-cream text-cream px-6 py-3 rounded-lg font-medium hover:bg-cream/10 transition-colors flex items-center">
-                Download GeoJSON
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
-              <button className="bg-transparent border border-cream text-cream px-6 py-3 rounded-lg font-medium hover:bg-cream/10 transition-colors flex items-center">
-                Download Shapefile
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
-            </div>
-          </div>
-        </section>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-teal text-cream/80 py-8">
-        <div className="container mx-auto px-6 text-center">
-          <p>© {new Date().getFullYear()} First American Land Allotments Project. All rights reserved.</p>
-          <p className="text-cream/60 text-sm mt-2">
-            Data sourced from historical records, government archives, and academic research.
-          </p>
-        </div>
-      </footer>
     </div>
-  )
+  );
 }
-

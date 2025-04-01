@@ -56,29 +56,17 @@ export default function StoryMapsPage() {
       <NavBar />
 
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 bg-slate-700 h-[400px]">
-          {/* Gray background instead of image */}
-          <Image
-            src="https://images.unsplash.com/photo-1583504386817-d8da6bb80998?q=80&w=3178&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Landscape background"
-            fill
-            priority
-            className="object-cover"
-            style={{ objectPosition: "center 20%" }} 
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
-        </div>
-        
-        {/* Content */}
-        <div className="container relative z-10 mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">Story Maps</h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">
+      <header className="relative py-16 bg-primary">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">Story Maps</h1>
+            <div className="h-1 w-20 bg-accent mb-6 rounded-full"></div>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl">
             Explore interactive narratives that combine maps, images, and text to tell the stories of First American land allotments.
-          </p>
+            </p>
+          </div>
         </div>
-      </section>
+      </header>
 
       {/* Story Maps Grid */}
       <section className="py-16 bg-slate-50">

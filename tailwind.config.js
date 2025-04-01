@@ -43,6 +43,20 @@ module.exports = {
           DEFAULT: "#DDA853",
           foreground: "#16404D",
         },
+        earth: {
+          DEFAULT: "#5C4D3C",
+          foreground: "#F9F3E5", // Cream
+          50: "#ECEAE7",
+          100: "#D9D5CF",
+          200: "#B3ABA0",
+          300: "#8D8170",
+          400: "#675740",
+          500: "#5C4D3C", // Base
+          600: "#534536",
+          700: "#493C30",
+          800: "#403329",
+          900: "#362A23",
+        },
       },
     },
   },
