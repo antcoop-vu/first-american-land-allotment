@@ -1,9 +1,10 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import NavBar from "@/components/nav-bar"
 import FeatureCard from "@/components/feature-card"
 import StoryMapHighlight from "@/components/story-map-highlight"
-import Image from "next/image"
+import { ArrowRight } from "lucide-react"
 
 export default function LandingPage() {
   return (
@@ -11,7 +12,7 @@ export default function LandingPage() {
       <NavBar />
 
       {/* Hero Section */}
-      <section className="relative py-32 md:py-40 lg:py-48 h-72">
+      <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -21,68 +22,88 @@ export default function LandingPage() {
             priority
             className="object-cover"
           />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-teal/40"></div>
-          {/* Content */}
-        <div className="container relative z-10 mx-auto px-4 text-center my-24">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">Welcome</h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">
-            Explore the history and geography of First American land allotments through interactive maps, research, and
-            comprehensive data resources.
-          </p>
-          <Link href="/data">
-            <Button className="h-20 rounded-md text-white text-xl bg-primary px-8">Explore the Dashboard</Button>
-          </Link>
+          {/* Gradient overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
         </div>
+
+        {/* Content */}
+        <div className="container relative z-10 mx-auto px-6 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white drop-shadow-lg leading-tight">
+              First American Land Allotments
+            </h1>
+            <p className="text-xl md:text-2xl max-w-2xl mx-auto mb-10 text-white/90 drop-shadow-md leading-relaxed">
+              Explore the history and geography of First American land allotments through interactive maps, research,
+              and comprehensive data resources.
+            </p>
+            <Link href="/data">
+              <Button className="h-14 rounded-md text-white text-lg bg-primary hover:bg-primary/90 px-8 shadow-lg transition-all duration-300 hover:translate-y-[-2px]">
+                Explore the Dashboard
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-16">
-          <h2 className="text-3xl font-bold mb-6">About</h2>
-          <p className="text-lg text-slate-700 max-w-4xl">
-            The First American Land Allotment project documents the historical distribution and changes of indigenous
-            lands across North America. Our resources provide researchers, educators, and community members with tools
-            to understand the complex history of land ownership, treaties, and federal policies that have shaped tribal
-            territories over time. Through interactive maps, comprehensive data sets, and in-depth research, we aim to
-            preserve this critical history and support indigenous communities in documenting their land rights.
-          </p>
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-6 md:px-8 lg:px-16">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 text-center">About Our Project</h2>
+            <div className="h-1 w-20 bg-primary mx-auto mb-12 rounded-full"></div>
+            <p className="text-lg md:text-xl text-slate-700 leading-relaxed mb-6">
+              The First American Land Allotment project documents the historical distribution and changes of indigenous
+              lands across North America. Our resources provide researchers, educators, and community members with tools
+              to understand the complex history of land ownership, treaties, and federal policies that have shaped
+              tribal territories over time.
+            </p>
+            <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
+              Through interactive maps, comprehensive data sets, and in-depth research, we aim to preserve this critical
+              history and support indigenous communities in documenting their land rights.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Feature Cards Section */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-24 bg-primary">
+        <div className="container mx-auto px-6 md:px-8 lg:px-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white text-center">Our Resources</h2>
+          <div className="h-1 w-20 bg-white mx-auto mb-16 rounded-full"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             <FeatureCard
               title="Story Maps"
               description="Explore interactive narratives that combine maps, images, and text to tell the stories of First American land allotments."
               buttonText="Explore story maps"
+
             />
 
             <FeatureCard
               title="Data"
               description="Access comprehensive datasets on historical land allotments, including boundaries, dates, and ownership records."
               buttonText="Explore the dashboard"
+
             />
 
             <FeatureCard
               title="Research"
               description="Discover scholarly articles, primary sources, and analysis on the history and impact of land allotment policies."
               buttonText="Explore the research"
+
             />
           </div>
         </div>
       </section>
 
-      {/* Story Map Highlight */}
-      <section className="py-16">
-        <div className="container mx-auto px-16">
+      {/* Story Map Highlight with Background */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 md:px-8 lg:px-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 text-center">Featured Story Map</h2>
+          <div className="h-1 w-20 bg-primary mx-auto mb-16 rounded-full"></div>
           <StoryMapHighlight />
         </div>
       </section>
-
     </div>
   )
 }
