@@ -23,7 +23,7 @@ export default function StoryMapHighlight() {
             <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Educational</span>
           </div>
           <Link href="/story-maps/dawes-act" className="mt-auto">
-            <Button className="group">
+            <Button className="group text-md py-6">
               View Story Map
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>

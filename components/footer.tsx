@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white py-12">
+    <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4 text-center">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -65,9 +65,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="px-3 py-2 bg-slate-800 text-white rounded-l focus:outline-none"
+                className="px-3 py-2 bg-slate-800 text-white rounded-md focus:outline-none"
               />
-              <button className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-r">
+              <button className="px-4 mx-2 py-2 bg-white hover:bg-white/50 text-slate-800 rounded-md">
                 Subscribe
               </button>
             </div>

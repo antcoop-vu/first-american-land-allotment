@@ -12,7 +12,7 @@ interface StoryMapCardProps {
 
 export default function StoryMapCard({ id, title, description, date }: StoryMapCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+    <div className="bg-slate-50 rounded-lg shadow-md overflow-hidden flex flex-col h-full">
       <div className="h-48 bg-slate-200 flex items-center justify-center">
         <MapIcon className="h-16 w-16 text-slate-400" />
       </div>
@@ -24,7 +24,7 @@ export default function StoryMapCard({ id, title, description, date }: StoryMapC
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-slate-600 mb-4 flex-grow">{description}</p>
         <Link href={`/story-maps/${id}`} className="mt-auto">
-          <Button variant="default" className="w-full">
+          <Button variant="default" className="w-full text-md py-6">
             Explore Story Map
           </Button>
         </Link>

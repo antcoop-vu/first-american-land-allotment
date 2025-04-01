@@ -45,7 +45,7 @@ export default function FeatureCard({ title, description, buttonText }: FeatureC
       <div className="p-6">
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-slate-600 mb-4">{description}</p>
-        <Button variant="default" className="w-full">
+        <Button variant="default" className="w-full text-md py-6 transition-all duration-300 hover:translate-y-[-2px]">
           {buttonText}
         </Button>
       </div>

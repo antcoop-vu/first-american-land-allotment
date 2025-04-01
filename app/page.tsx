@@ -39,7 +39,7 @@ export default function LandingPage() {
             <Link href="/data">
               <Button className="h-14 rounded-md text-white text-lg bg-primary hover:bg-primary/90 px-8 shadow-lg transition-all duration-300 hover:translate-y-[-2px]">
                 Explore the Dashboard
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
           </div>
