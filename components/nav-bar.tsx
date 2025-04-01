@@ -2,14 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Search, Menu, X, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+import { Search, Menu, X } from "lucide-react"
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -29,25 +22,9 @@ export default function NavBar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="link" className="flex items-center text-md font-normal text-slate-700 hover:text-slate-900">
-                  About <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <Link href="#" className="w-full">
-                    Data Creation
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="#" className="w-full">
-                    Partners
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Link href="/about" className="text-slate-700 hover:text-slate-900">
+              About
+            </Link>
 
             <Link href="/story-maps" className="text-slate-700 hover:text-slate-900">
               Story Maps
@@ -90,7 +67,7 @@ export default function NavBar() {
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4 space-y-4">
             <Link
-              href="#"
+              href="/about"
               className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
             >
               About
@@ -114,7 +91,7 @@ export default function NavBar() {
               Tutorials
             </Link>
             <Link
-              href="#"
+              href="/data"
               className="block py-2 text-slate-700 hover:text-slate-900 border-b border-slate-100"
             >
               Data
