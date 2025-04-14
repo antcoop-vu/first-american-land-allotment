@@ -50,7 +50,7 @@ export default function LandingPage() {
       {/* About Section */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-6 md:px-8 lg:px-16">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto items-center justify-center content-center flex flex-col">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-earth text-center">
               About Our Project
             </h2>
@@ -63,11 +63,17 @@ export default function LandingPage() {
               ownership, treaties, and federal policies that have shaped tribal
               territories over time.
             </p>
-            <p className="text-lg md:text-xl text-earth/90 leading-relaxed">
+            <p className="text-lg md:text-xl text-earth/90 leading-relaxed mb-6">
               Through interactive maps, comprehensive data sets, and in-depth
               research, we aim to preserve this critical history and support
               indigenous communities in documenting their land rights.
             </p>
+            <Link href="/about">
+              <Button className="h-14 rounded-md text-muted text-lg bg-accent hover:bg-accent/90 px-8 shadow-lg transition-all duration-300 hover:translate-y-[-2px]">
+                Read More
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
