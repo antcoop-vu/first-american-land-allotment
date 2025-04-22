@@ -1,4 +1,1 @@
-Examples
-[https://nativeland.info/]
-[https://iltf.org/]
-[https://treatysigners.us/]
+In the root of the directory run : npm run dev
