@@ -61,7 +61,7 @@ export default function TutorialsPage() {
           </h2>
           <Tabs defaultValue="beginners" className="w-full max-w-4xl mx-auto">
             <TabsList
-              className="grid w-full grid-cols-3"
+              className="grid w-full grid-cols-1 md:grid-cols-3"
               style={{ backgroundColor: "rgba(255,255,255,0.3)" }}
             >
               <TabsTrigger value="beginners" style={{ color: colors.navy }}>
@@ -491,12 +491,12 @@ export default function TutorialsPage() {
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <Card style={{ borderColor: colors.teal }}>
-            <div className="aspect-video bg-gray-200 flex items-end justify-items-end w-full relative mb-6 sm:mb-0 overflow-hidden rounded-t-sm">
+            <div className="aspect-[16/12] bg-gray-200 flex items-end justify-items-end w-full relative mb-6 sm:mb-0 overflow-hidden rounded-t-sm">
               <Image
                 src="/tutorials/beginner.png"
                 alt="Beginner's Guide Video Thumbnail"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
             <CardContent className="p-4">
@@ -510,8 +510,13 @@ export default function TutorialsPage() {
           </Card>
 
           <Card style={{ borderColor: colors.teal }}>
-            <div className="aspect-video bg-gray-200 flex items-end justify-items-end w-full relative mb-6 sm:mb-0 overflow-hidden rounded-t-sm">
-              <Image src="/tutorials/ancestory.png" alt="Beginner's Guide Video Thumbnail" fill />
+            <div className="aspect-[16/12] bg-gray-200 flex items-end justify-items-end w-full relative mb-6 sm:mb-0 overflow-hidden rounded-t-sm">
+              <Image
+                src="/tutorials/ancestory.png"
+                alt="Finding Family Connections Thumbnail"
+                fill
+                className="object-cover object-top"
+              />
             </div>
             <CardContent className="p-4">
               <h3 className="font-semibold" style={{ color: colors.navy }}>
@@ -524,8 +529,13 @@ export default function TutorialsPage() {
           </Card>
 
           <Card style={{ borderColor: colors.teal }}>
-            <div className="aspect-video bg-gray-200 flex items-end justify-items-end w-full relative mb-6 sm:mb-0 overflow-hidden rounded-t-sm">
-              <Image src="/tutorials/documents.png" alt="Beginner's Guide Video Thumbnail" fill />
+            <div className="aspect-[16/12] bg-gray-200 flex items-end justify-items-end w-full relative mb-6 sm:mb-0 overflow-hidden rounded-t-sm">
+              <Image
+                src="/tutorials/documents.png"
+                alt="Document Analysis Thumbnail"
+                fill
+                className="object-cover object-top"
+              />
             </div>
             <CardContent className="p-4">
               <h3 className="font-semibold" style={{ color: colors.navy }}>
