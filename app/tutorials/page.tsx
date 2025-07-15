@@ -114,7 +114,7 @@ export default function TutorialsPage() {
 
           <div className="space-y-12">
             <Card
-              className="shadow-md overflow-hidden"
+              className="shadow-md overflow-hidden bg-lightCream"
               style={{ borderColor: colors.teal }}
             >
               <div className="md:flex">
@@ -154,7 +154,7 @@ export default function TutorialsPage() {
             </Card>
 
             <Card
-              className="shadow-md overflow-hidden"
+              className="shadow-md overflow-hidden bg-lightCream"
               style={{ borderColor: colors.teal }}
             >
               <div className="md:flex">
@@ -200,7 +200,7 @@ export default function TutorialsPage() {
             </Card>
 
             <Card
-              className="shadow-md overflow-hidden"
+               className="shadow-md overflow-hidden bg-lightCream"
               style={{ borderColor: colors.teal }}
             >
               <div className="md:flex">
@@ -257,7 +257,7 @@ export default function TutorialsPage() {
             </Card>
 
             <Card
-              className="shadow-md overflow-hidden"
+              className="shadow-md overflow-hidden bg-lightCream"
               style={{ borderColor: colors.teal }}
             >
               <div className="md:flex">
@@ -312,7 +312,7 @@ export default function TutorialsPage() {
             </Card>
 
             <Card
-              className="shadow-md overflow-hidden"
+              className="shadow-md overflow-hidden bg-lightCream"
               style={{ borderColor: colors.teal }}
             >
               <div className="md:flex">
@@ -363,7 +363,7 @@ export default function TutorialsPage() {
             </Card>
 
             <Card
-              className="shadow-md overflow-hidden"
+              className="shadow-md overflow-hidden bg-lightCream"
               style={{ borderColor: colors.teal }}
             >
               <div className="md:flex">
@@ -490,7 +490,7 @@ export default function TutorialsPage() {
           Video Tutorials
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <Card style={{ borderColor: colors.teal }}>
+          <Card style={{ borderColor: colors.teal, backgroundColor: "white" }}>
             <div className="aspect-[16/12] bg-gray-200 flex items-end justify-items-end w-full relative mb-6 sm:mb-0 overflow-hidden rounded-t-sm">
               <Image
                 src="/tutorials/beginner.png"
@@ -509,7 +509,7 @@ export default function TutorialsPage() {
             </CardContent>
           </Card>
 
-          <Card style={{ borderColor: colors.teal }}>
+          <Card style={{ borderColor: colors.teal, backgroundColor: "white" }}>
             <div className="aspect-[16/12] bg-gray-200 flex items-end justify-items-end w-full relative mb-6 sm:mb-0 overflow-hidden rounded-t-sm">
               <Image
                 src="/tutorials/ancestory.png"
@@ -528,7 +528,7 @@ export default function TutorialsPage() {
             </CardContent>
           </Card>
 
-          <Card style={{ borderColor: colors.teal }}>
+         <Card style={{ borderColor: colors.teal, backgroundColor: "white" }}>
             <div className="aspect-[16/12] bg-gray-200 flex items-end justify-items-end w-full relative mb-6 sm:mb-0 overflow-hidden rounded-t-sm">
               <Image
                 src="/tutorials/documents.png"
@@ -554,7 +554,7 @@ export default function TutorialsPage() {
             style={{
               backgroundColor: colors.amber,
               color: colors.navy,
-              borderColor: colors.navy,
+              borderColor: colors.amber,
             }}
             className="hover:opacity-90"
           >
@@ -580,7 +580,7 @@ export default function TutorialsPage() {
               style={{
                 backgroundColor: colors.cream,
                 color: colors.navy,
-                borderColor: colors.amber,
+                borderColor: colors.cream,
               }}
               className="hover:opacity-90"
             >
@@ -588,7 +588,7 @@ export default function TutorialsPage() {
             </Button>
             <Button
               variant="default"
-              style={{ backgroundColor: colors.amber, color: colors.navy }}
+              style={{ backgroundColor: colors.amber, color: colors.navy, borderColor: colors.amber }}
               className="hover:opacity-90"
             >
               Schedule 1:1 Research Help
@@ -598,7 +598,7 @@ export default function TutorialsPage() {
               style={{
                 backgroundColor: colors.cream,
                 color: colors.navy,
-                borderColor: colors.amber,
+                borderColor: colors.cream,
               }}
               className="hover:opacity-90"
             >

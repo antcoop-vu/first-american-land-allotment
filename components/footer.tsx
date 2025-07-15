@@ -87,9 +87,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="px-3 py-2 bg-slate-800/50 text-white rounded-md focus:outline-none"
+                className="px-3 py-2 bg-slate-800/50 text-white rounded-l-md focus:outline-none"
               />
-              <button className="px-4 mx-2 py-2 border bg-white border-teal hover:bg-accent text-teal hover:text-white rounded-md">
+              <button className="px-4 me-2 py-2 border bg-white border-teal hover:bg-accent text-teal hover:text-white rounded-r-md">
                 Subscribe
               </button>
             </div>
