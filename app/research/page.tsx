@@ -87,12 +87,12 @@ export default function ResearchPage() {
                 <h3 className="text-xl font-bold mb-2 text-earth">
                   Dawes Rolls Collection
                 </h3>
-                <p className="text-earth/80 mb-4">
+                <p className="text-earth mb-4">
                   Comprehensive digital archive of the Dawes Rolls, the official
                   census of the Five Civilized Tribes used to allocate land
                   during the allotment era.
                 </p>
-                <div className="flex items-center text-sm text-earth/60 mb-4">
+                <div className="flex items-center text-sm text-earth mb-4">
                   <Database className="w-4 h-4 mr-1" />
                   <span>112,476 records</span>
                 </div>
@@ -120,12 +120,12 @@ export default function ResearchPage() {
                 <h3 className="text-xl font-bold mb-2 text-earth">
                   Tribal Territory Maps
                 </h3>
-                <p className="text-earth/80 mb-4">
+                <p className="text-earth mb-4">
                   Historical cartographic collection showing changing tribal
                   territories over time, from pre-removal boundaries through
                   reservation creation and allotment periods.
                 </p>
-                <div className="flex items-center text-sm text-earth/60 mb-4">
+                <div className="flex items-center text-sm text-earth mb-4">
                   <Map className="w-4 h-4 mr-1" />
                   <span>4,872 maps</span>
                 </div>

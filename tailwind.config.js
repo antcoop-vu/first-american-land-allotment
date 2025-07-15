@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        lightCream: "#FFFCF0",
         cream: "#FBF5DD",
         sage: "#A6CDC6",
         teal: "#16404D",
