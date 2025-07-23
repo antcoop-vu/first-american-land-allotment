@@ -82,16 +82,6 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="bg-copper/10 p-3 rounded-full mr-4">
-                    <Phone className="h-5 w-5 text-copper" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1 text-earth">Phone</h3>
-                    <p className="text-earth">(555) 123-4567</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
                   <div className="bg-accent/10 p-3 rounded-full mr-4">
                     <MapPin className="h-5 w-5 text-accent" />
                   </div>
@@ -108,30 +98,6 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className="mt-12 p-6 bg-white rounded-xl shadow-md border border-primary/10">
-                <h3 className="text-xl font-semibold mb-4 text-earth">
-                  Office Hours
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex justify-between">
-                    <span className="text-earth">Monday - Friday</span>
-                    <span className="font-medium text-earth">
-                      9:00 AM - 5:00 PM
-                    </span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span className="text-earth">Saturday</span>
-                    <span className="font-medium text-earth">
-                      10:00 AM - 2:00 PM
-                    </span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span className="text-earth">Sunday</span>
-                    <span className="font-medium text-earth">Closed</span>
-                  </li>
-                </ul>
               </div>
             </div>
 
