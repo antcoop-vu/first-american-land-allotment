@@ -3,24 +3,39 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-primary text-white py-12">
-      <div className="container mx-auto px-4 text-center">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">
-              First American Land Allotment
-            </h3>
+      <div className="container mx-auto px-4">
+        <h3 className="text-xl font-bold mb-4">
+          First American Land Allotment
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-8 gap-8">
+          <div className="col-span-3">
             <p className="text-slate-300">
               Preserving and documenting indigenous land history through
               interactive resources.
             </p>
           </div>
-          <div>
-            <h4 className="font-bold mb-4">Resources</h4>
-            <ul className="space-y-2">
+          <div className="col-span-2">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-slate-300 hover:text-white underline"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/data"
+                  className="text-slate-300 hover:text-white underline"
+                >
+                  Data
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/story-maps"
-                  className="text-slate-300 hover:text-white"
+                  className="text-slate-300 hover:text-white underline"
                 >
                   Story Maps
                 </Link>
@@ -28,7 +43,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/research"
-                  className="text-slate-300 hover:text-white"
+                  className="text-slate-300 hover:text-white underline"
                 >
                   Research
                 </Link>
@@ -36,7 +51,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/tutorials"
-                  className="text-slate-300 hover:text-white"
+                  className="text-slate-300 hover:text-white underline"
                 >
                   Tutorials
                 </Link>
@@ -44,46 +59,19 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-slate-300 hover:text-white"
+                  className="text-slate-300 hover:text-white underline"
                 >
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          <div>
-            <h4 className="font-bold mb-4">About Us</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/mission"
-                  className="text-slate-300 hover:text-white"
-                >
-                  Mission
-                </Link>
-              </li>
-              <li>
-                <Link href="/team" className="text-slate-300 hover:text-white">
-                  Team
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/partners"
-                  className="text-slate-300 hover:text-white"
-                >
-                  Partners
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold mb-4">Stay Connected</h4>
+          <div className="col-span-3">
             <p className="text-slate-300 mb-4">
               Subscribe to our newsletter for updates on new resources and
               research.
             </p>
-            <div className="flex justify-center">
+            <div className="flex">
               <input
                 type="email"
                 placeholder="Your email"
@@ -95,7 +83,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-50">
+        <div className="border-t border-slate-700 mt-8 pt-8 text-slate-50">
           <p>
             © {new Date().getFullYear()} First American Land Allotment Project.
             All rights reserved.

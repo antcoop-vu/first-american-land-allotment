@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/nav-bar";
-import StoryMapCard from "@/components/story-map-card";
+import StoryMapsClient from "@/components/story-maps-client";
 
 // Sample story map data - in a real app, this would come from a database or API
 const storyMaps = [
@@ -62,6 +62,8 @@ const storyMaps = [
   },
 ];
 
+const ITEMS_PER_PAGE = 3;
+
 export default function StoryMapsPage() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -86,18 +88,7 @@ export default function StoryMapsPage() {
       {/* Story Maps Grid */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {storyMaps.map((storyMap) => (
-              <StoryMapCard
-                key={storyMap.id}
-                id={storyMap.id}
-                title={storyMap.title}
-                description={storyMap.description}
-                image={storyMap.image}
-                date={storyMap.date}
-              />
-            ))}
-          </div>
+          <StoryMapsClient storyMaps={storyMaps} itemsPerPage={ITEMS_PER_PAGE} />
         </div>
       </section>
     </div>
