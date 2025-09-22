@@ -1,12 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
+import { ArrowRight } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import NavBar from "@/components/nav-bar";
 import FeatureCard from "@/components/feature-card";
 import StoryMapHighlight from "@/components/story-map-highlight";
-import { ArrowRight } from "lucide-react";
+
 
 export default function LandingPage() {
+  const t = useTranslations('HomePage');
+
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar />
@@ -30,16 +35,14 @@ export default function LandingPage() {
         <div className="container relative z-10 mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-cream drop-shadow-lg leading-tight">
-              First American Land Allotments
+              {t('title')}
             </h1>
             <p className="text-xl md:text-2xl max-w-2xl mx-auto mb-10 text-cream/90 drop-shadow-md leading-relaxed">
-              Explore the history and geography of First American land
-              allotments through interactive maps, research, and comprehensive
-              data resources.
+              {t('description')}
             </p>
             <Link href="/data">
               <Button className="h-14 rounded-md text-muted text-lg bg-accent hover:bg-accent/90 px-8 shadow-lg transition-all duration-300 hover:translate-y-[-2px]">
-                Explore the Dashboard
+                {t('exploreDashboardCta')}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
@@ -52,22 +55,12 @@ export default function LandingPage() {
         <div className="container mx-auto px-6 md:px-8 lg:px-16">
           <div className="max-w-4xl mx-auto items-center justify-center content-center flex flex-col">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-earth text-center">
-              About Our Project
+              {t('aboutTitle')}
             </h2>
             <div className="h-1 w-20 bg-accent mx-auto mb-12 rounded-full"></div>
-            <p className="text-lg md:text-xl text-earth/90 leading-relaxed mb-6">
-              The First American Land Allotment project documents the historical
-              distribution and changes of indigenous lands across North America.
-              Our resources provide researchers, educators, and community
-              members with tools to understand the complex history of land
-              ownership, treaties, and federal policies that have shaped tribal
-              territories over time.
-            </p>
-            <p className="text-lg md:text-xl text-earth/90 leading-relaxed mb-6">
-              Through interactive maps, comprehensive data sets, and in-depth
-              research, we aim to preserve this critical history and support
-              indigenous communities in documenting their land rights.
-            </p>
+            <div className="text-lg md:text-xl text-earth/90 leading-relaxed mb-6">
+              {t('aboutDescription')}
+            </div>
             <Link href="/about">
               <Button className="h-14 rounded-md text-muted text-lg bg-accent hover:bg-accent/90 px-8 shadow-lg transition-all duration-300 hover:translate-y-[-2px]">
                 Read More

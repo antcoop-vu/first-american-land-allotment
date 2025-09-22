@@ -15,7 +15,7 @@ export default function Footer() {
             </p>
           </div>
           <div className="col-span-2">
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-2">
               <li>
                 <Link
                   href="/about"
