@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import NavBar from "@/components/nav-bar";
+import NavBar from "@/components/NavigationContainer";
 import {
   Mail,
   Phone,
@@ -42,9 +42,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-muted">
-      <NavBar />
-
+    <>
       {/* Hero Section */}
       <header className="relative py-20 bg-primary">
         <div className="container mx-auto px-6">
@@ -296,6 +294,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

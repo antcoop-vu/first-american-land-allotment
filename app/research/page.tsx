@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import NavBar from "@/components/nav-bar";
+import NavBar from "@/components/NavigationContainer";
 import Footer from "@/components/footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,9 +16,7 @@ import {
 
 export default function ResearchPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-muted">
-      <NavBar />
-
+    <>
       {/* Hero Section */}
       <header className="relative py-20 bg-primary">
         <div className="container mx-auto px-6">
@@ -220,6 +218,6 @@ export default function ResearchPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

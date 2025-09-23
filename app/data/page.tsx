@@ -1,4 +1,4 @@
-import NavBar from "@/components/nav-bar";
+import NavBar from "@/components/NavigationContainer";
 import MapDashboard from "@/components/data-dashboard/map-dashboard";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -6,9 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function DataPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      <NavBar />
-
+    <>
       {/* Header Section - Styled like the hero but smaller */}
       <header className="relative py-16 bg-primary">
         <div className="container mx-auto px-6">
@@ -238,6 +236,6 @@ export default function DataPage() {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }

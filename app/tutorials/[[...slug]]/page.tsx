@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import NavBar from "@/components/nav-bar";
+import NavBar from "@/components/NavigationContainer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -30,8 +30,6 @@ export default function TutorialsPage() {
       className="min-h-screen flex flex-col"
       style={{ backgroundColor: colors.cream }}
     >
-      <NavBar />
-
       {/* Hero Section */}
       <section
         style={{ backgroundColor: colors.navy }}

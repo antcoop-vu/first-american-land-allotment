@@ -16,6 +16,11 @@ const nextConfig = {
         hostname: "placehold.co",
         pathname: "/**",
       },
+      {
+        protocol: "http",
+        hostname: "allotment-cms.test",
+        pathname: "/**",
+      },
     ],
   },
 };

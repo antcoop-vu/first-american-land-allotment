@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import StoryMapCard from "@/components/story-map-card";
 import StoryMapsPagination from "@/components/story-maps-pagination";
+import { formatDate } from "@/lib/utils";
 
 interface StoryMap {
   id: string;
@@ -22,6 +23,7 @@ export default function StoryMapsClient({
   itemsPerPage,
 }: StoryMapsClientProps) {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const { paginatedStoryMaps, totalPages } = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -36,7 +38,11 @@ export default function StoryMapsClient({
   }, [currentPage, storyMaps, itemsPerPage]);
 
   const handlePageChange = (page: number) => {
-    setCurrentPage(page);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentPage(page);
+      setIsTransitioning(false);
+    }, 300);
   };
 
   return (
@@ -50,8 +56,12 @@ export default function StoryMapsClient({
         </p>
       </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Grid with transition */}
+      <div
+        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-300 ${
+          isTransitioning ? "opacity-40" : "opacity-100"
+        }`}
+      >
         {paginatedStoryMaps.map((storyMap) => (
           <StoryMapCard
             key={storyMap.id}
@@ -59,7 +69,7 @@ export default function StoryMapsClient({
             title={storyMap.title}
             description={storyMap.description}
             image={storyMap.image}
-            date={storyMap.date}
+            date={formatDate(storyMap.date)}
           />
         ))}
       </div>
