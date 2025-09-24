@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 
 // Dynamically import the map component to avoid SSR issues with Leaflet
 const StoryMapDashboard = dynamic(
-  () => import("@/components/data-dashboard/story-map-dashboard"),
+  () => import("@/components/data-dashboard/StoryMapDashboard"),
   { ssr: false }
 )
 

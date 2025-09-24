@@ -135,7 +135,7 @@ export default function LandingPageClient({
             {data?.["features_title"] || "Our Resources"}
           </h2>
           <div className="h-1 w-20 bg-accent mx-auto mb-16 rounded-full"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12">
             {data?.["features"]?.map((feature, index) => (
               <FeatureCard
                 key={index}
