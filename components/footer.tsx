@@ -101,7 +101,7 @@ export default async function Footer() {
               </li> */}
             </ul>
           </div>
-          <div className="col-span-3">
+          {/* <div className="col-span-3">
             <p className="text-slate-300 mb-4">
               {footerData?.['newsletter_title'] || 'Subscribe to our newsletter for the latest updates and resources.'}
             </p>
@@ -115,7 +115,7 @@ export default async function Footer() {
                 {footerData?.['newsletter_cta'] || 'Subscribe'}
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="border-t border-slate-700 mt-8 pt-8 text-slate-50">
           <p>

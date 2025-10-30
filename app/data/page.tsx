@@ -10,29 +10,27 @@ import InfoCard from "@/components/ui/info-card";
 export default function DataPage() {
   return (
     <>
-      <main className="flex-grow">
-        <PageHeader
-          title="Land Allotment Data"
-          description="Explore land allotment data and resources."
+      <PageHeader
+        title="Land Allotment Data"
+        description="Explore land allotment data and resources."
+      />
+      <SectionHeader
+        title="Interactive Data Explorer"
+        description="Use the interactive map to explore land allotment data. Filter by tribe, time period, or land type. You can also annotate the map and download data for your research."
+      >
+        <InfoCard
+          title="Need Help?"
+          description="Our tutorials provide step-by-step guidance on using all our research tools and resources."
+          cta="View Tutorials"
+          url="/tutorials"
         />
-        <SectionHeader
-          title="Interactive Data Explorer"
-          description="Use the interactive map to explore land allotment data. Filter by tribe, time period, or land type. You can also annotate the map and download data for your research."
-        >
-          <InfoCard
-            title="Need Help?"
-            description="Our tutorials provide step-by-step guidance on using all our research tools and resources."
-            cta="View Tutorials"
-            url="/tutorials"
-          />
-        </SectionHeader>
-        <MapDashboard />
-        <SplitPanel
-          title="Data Resources"
-          leftContent={<LeftContent />}
-          rightContent={<RightContent />}
-        />
-      </main>
+      </SectionHeader>
+      <MapDashboard />
+      <SplitPanel
+        title="Data Resources"
+        leftContent={<LeftContent />}
+        rightContent={<RightContent />}
+      />
     </>
   );
 }

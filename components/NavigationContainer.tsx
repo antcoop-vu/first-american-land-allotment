@@ -20,17 +20,12 @@ async function fetchNavigationData() {
   }
 } 
 
-export default async function NavBar() {
+export default async function NavigationContainer() {
   const navigationData = await fetchNavigationData();
 
-  if (!navigationData) {
-    return null;
-  }
+  if (!navigationData) return null;
 
   return (
-    <>
-      <Navigation navigationData={navigationData} />
-    </>
+    <Navigation navigationData={navigationData} />
   );
 }
-
