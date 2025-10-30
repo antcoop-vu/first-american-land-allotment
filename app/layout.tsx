@@ -1,28 +1,37 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import Footer from "@/components/footer"
+import type React from "react";
+import { NextIntlClientProvider } from "next-intl";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Footer from "@/components/footer";
+import NavigationContainer from "@/components/NavigationContainer";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "First American Land Allotment",
   description:
     "Explore the history and geography of First American land allotments through interactive maps, research, and comprehensive data resources.",
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <Footer />
-      </body>
-    </html>
-  )
+    <NextIntlClientProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <div className="min-h-screen flex flex-col">
+            <main className="flex-grow">
+              <NavigationContainer />
+              {children}
+              <Footer />
+            </main>
+          </div>
+        </body>
+      </html>
+    </NextIntlClientProvider>
+  );
 }

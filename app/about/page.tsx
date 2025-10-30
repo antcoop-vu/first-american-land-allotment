@@ -3,14 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import NavBar from "@/components/nav-bar";
+import NavBar from "@/components/NavigationContainer";
 import { ArrowRight } from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <NavBar />
-
+    <>
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
         {/* Background Image */}
@@ -205,6 +203,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

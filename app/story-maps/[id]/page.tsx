@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import NavBar from "@/components/nav-bar"
+import NavBar from "@/components/NavigationContainer"
 import { ArrowLeft, Calendar, Share2, Download, MapPin } from "lucide-react"
 import StoryMapWrapper from "@/components/story-map-wrapper"
 
@@ -67,8 +67,7 @@ export default async function StoryMapPage({ params }: { params: paramsType }) {
   // Handle case where story map doesn't exist
   if (!storyMap) {
     return (
-      <div className="min-h-screen flex flex-col">
-        <NavBar />
+      <>
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-3xl font-bold mb-4">Story Map Not Found</h1>
           <p className="mb-8">The story map you're looking for doesn't exist or has been removed.</p>
@@ -76,14 +75,12 @@ export default async function StoryMapPage({ params }: { params: paramsType }) {
             <Button>Return to Story Maps</Button>
           </Link>
         </div>
-      </div>
+      </>
     )
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <NavBar />
-
+    <>
       {/* Hero Section */}
       <section className="relative py-32 md:py-40">
         {/* Background Image */}
@@ -173,8 +170,6 @@ export default async function StoryMapPage({ params }: { params: paramsType }) {
           </div>
         </div>
       </section>
-
-
-    </div>
+    </>
   )
 } 

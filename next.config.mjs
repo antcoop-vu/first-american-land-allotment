@@ -1,3 +1,7 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -12,8 +16,13 @@ const nextConfig = {
         hostname: "placehold.co",
         pathname: "/**",
       },
+      {
+        protocol: "http",
+        hostname: "allotment-cms.test",
+        pathname: "/**",
+      },
     ],
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

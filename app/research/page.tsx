@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import NavBar from "@/components/nav-bar";
+import NavBar from "@/components/NavigationContainer";
 import Footer from "@/components/footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,9 +16,7 @@ import {
 
 export default function ResearchPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-muted">
-      <NavBar />
-
+    <>
       {/* Hero Section */}
       <header className="relative py-20 bg-primary">
         <div className="container mx-auto px-6">
@@ -72,7 +70,7 @@ export default function ResearchPage() {
           <div className="h-1 w-20 bg-accent mx-auto mb-12 rounded-full"></div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-muted shadow-md overflow-hidden">
+            <Card className="bg-muted shadow-md overflow-hidden grid grid-rows-[auto_1fr]">
               <div className="h-auto w-full bg-muted relative">
                 <img
                   src="https://placehold.co/400x200?text=Dawes+Rolls+Collection"
@@ -83,7 +81,7 @@ export default function ResearchPage() {
                   1887-1914
                 </div>
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 grid grid-rows-[auto_1fr_auto_auto]">
                 <h3 className="text-xl font-bold mb-2 text-earth">
                   Dawes Rolls Collection
                 </h3>
@@ -96,7 +94,7 @@ export default function ResearchPage() {
                   <Database className="w-4 h-4 mr-1" />
                   <span>112,476 records</span>
                 </div>
-                <Link href="/research/dawes-rolls">
+                <Link className="self-end" href="/research/dawes-rolls">
                   <Button className="w-full bg-primary text-cream hover:bg-primary/90 group">
                     Explore Collection
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -105,7 +103,7 @@ export default function ResearchPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-muted shadow-md overflow-hidden">
+            <Card className="bg-muted shadow-md overflow-hidden grid grid-rows-[auto_1fr]">
               <div className="h-auto w-full bg-muted relative">
                 <img
                   src="https://placehold.co/400x200?text=Tribal+Territory+Maps"
@@ -116,7 +114,7 @@ export default function ResearchPage() {
                   1830-1920
                 </div>
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 grid grid-rows-[auto_1fr_auto_auto]">
                 <h3 className="text-xl font-bold mb-2 text-earth">
                   Tribal Territory Maps
                 </h3>
@@ -129,7 +127,7 @@ export default function ResearchPage() {
                   <Map className="w-4 h-4 mr-1" />
                   <span>4,872 maps</span>
                 </div>
-                <Link href="/research/territory-maps">
+                <Link className="self-end" href="/research/territory-maps">
                   <Button className="w-full bg-primary text-cream hover:bg-primary/90 group">
                     View Map Archive
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -220,6 +218,6 @@ export default function ResearchPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

@@ -4,37 +4,31 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-export default function NavBar() {
+function Navigation({ navigationData }: { navigationData: any }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  console.log(navigationData);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navigationLinks = [
-    { href: "/story-maps", label: "Story Maps" },
-    { href: "/data", label: "Data" },
-    { href: "/research", label: "Research" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ];
-
   return (
     <nav className="bg-slate-50 py-6 shadow-md">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-slate-900">
-            First American Land Allotments
+          <Link href={navigationData?.['home_url'] || "/"} className="text-2xl font-bold text-slate-900">
+            {navigationData?.['site_title'] || "First American Land Allotment"}
           </Link>
           
           <div className="hidden lg:flex space-x-6">
-            {navigationLinks.map((link) => (
+            {navigationData?.['main_menu']?.map((link) => (
               <Link
-                key={link.href}
-                href={link.href}
+                key={link.url}
+                href={link.url}
                 className="text-slate-600 text-xl hover:text-accent transition-colors"
               >
-                {link.label}
+                {link.title}
               </Link>
             ))}
           </div>
@@ -55,14 +49,14 @@ export default function NavBar() {
         {isMenuOpen && (
           <div className="lg:hidden mt-6 pb-2">
             <div className="flex flex-col space-y-4">
-              {navigationLinks.map((link) => (
+              {navigationData?.['main_menu']?.map((link) => (
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  key={link.url}
+                  href={link.url}
                   className="text-slate-600 text-xl hover:text-accent transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {link.label}
+                  {link.title}
                 </Link>
               ))}
             </div>
@@ -72,3 +66,5 @@ export default function NavBar() {
     </nav>
   );
 }
+
+export default Navigation;

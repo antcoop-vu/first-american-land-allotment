@@ -1,0 +1,55 @@
+{
+  "HomePage": {
+    "title": "First American Land Allotments",
+    "description": "Explore the history and geography of First American land allotments through interactive maps, research, and comprehensive data resources.",
+    "exploreDashboardCta": "Explore the Dashboard",
+    "aboutTitle": "About Our Project",
+    "aboutDescription": "<p>The First American Land Allotment project documents the historical distribution and changes of indigenous lands across North America. Our resources provide researchers, educators, and community members with tools to understand the complex history of land ownership, treaties, and federal policies that have shaped tribal territories over time.</p><p>Through interactive maps, comprehensive data sets, and in-depth research, we aim to preserve this critical history and support indigenous communities in documenting their land rights.</p>",
+    "contactCta": "Read More",
+    "resources": {
+      "title": "Resources",
+      "sections": {
+        "maps": {
+          "title": "Story Maps",
+          "description": "Explore interactive narratives that combine maps, images, and text to tell the stories of First American land allotments.",
+          "image": "/images/homepage/storymaps.png",
+          "cta": {
+            "text": "Explore Story Maps",
+            "ariaLabel": "Explore Story Maps",
+            "href": "/storymaps"
+          }
+        },
+        "data": {
+          "title": "Data Sets",
+          "description": "Access comprehensive data sets for research and analysis on land allotments, treaties, and federal policies.",
+          "image": "/images/homepage/datasets.png",
+          "cta": {
+            "text": "Explore the dashboard",
+            "ariaLabel": "Explore the dashboard",
+            "href": "/datasets"
+          }
+        },
+        "research": {
+          "title": "Research Articles",
+          "description": "Read in-depth articles and papers on the history and impact of land allotment policies on indigenous communities.",
+          "image": "/images/homepage/research.png",
+          "cta": {
+            "text": "Explore the research",
+            "ariaLabel": "Explore the research",
+            "href": "/research"
+          }
+        }
+      }
+    },
+    "featuredStoryMap": {
+      "label": "Featured",
+      "title": "The Dawes Act and Its Impact",
+      "description": "Explore how the 1887 Dawes Act fundamentally changed land ownership patterns for Native American tribes, leading to the loss of more than 90 million acres of tribal land by 1934.",
+      "cta": {
+        "text": "View Story Map",
+        "ariaLabel": "View the story map",
+        "href": "/story-maps/dawes-act"
+      }
+    }
+  }
+}
